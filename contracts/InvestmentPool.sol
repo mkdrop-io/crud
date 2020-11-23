@@ -2,7 +2,7 @@ pragma solidity ^0.5.0;
 
 
 
-contract SuperPool is Pool {
+contract InvestmentPool is Pool {
   uint constant DECIMAL_MULTIPLIER = 1e18;
   
   /**  description of params 
