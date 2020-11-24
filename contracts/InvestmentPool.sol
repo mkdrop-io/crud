@@ -17,8 +17,8 @@ contract InvestmentPool is Pool {
     //stakeholderShare[_ADMIN] 
     //stakeholderShare[POOL_OPERATOR] 
 
-    setRole_(RL_ADMIN, msg.sender);
-    setRole_(RL_POOL_OPERATOR, _poolOperatorAddress);
+    setRole_(RR_ADMIN, msg.sender);
+    setRole_(RR_POOL_OPERATOR, _poolOperatorAddress);
    
     tokenAddress = _tokenAddress;
     tokenPrice = _tokenPrice;
