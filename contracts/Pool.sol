@@ -9,6 +9,8 @@ import "./OCCToken.sol";
 
 contract Pool {
   
+  uint pool = 0;
+
 
   event Deposit(
         address indexed _reserve,
@@ -43,6 +45,29 @@ contract Pool {
         uint256 allocFunds; // How many funds allocated in this pool
         uint256 OCCPerShare; // Accumulated OCC per share
     }
+
+
+  //States of Pool:
+  //PoolOpen: Accepting
+  //PayOut: Withdraw
+  enum States {
+    PoolActive,  //0
+    PoolClosed    //1
+  }
+
+  States state = States.PoolActive;
+
+ //View Status of contract State
+  function stateOfPool() public view returns(States){
+      return state;
+  }
+
+  //View Size of pool
+  function poolSize() public view returns (uint){
+      return pool;
+  }
+
+
 
   constructor( address _tokenAddress,
                 uint _tokenPrice) public {
