@@ -8,7 +8,7 @@ contract IPool is Pool {
 
     // Deposits
 
-    event PoolDeposit(address indexed _from, address indexed _tokenAddress, uint256 _value);
+    event PoolDeposit(address indexed _from, address indexed _tokenAddress, uint256 _amount, uint256 lock_period);
     
     event DepositRequest(address indexed _lpAddress, address indexed _tokenAddress, bytes32 indexed _id, uint256 _maxValue);
 
