@@ -2,5 +2,5 @@ pragma solidity ^0.4.23;
 
 import "./RoleModel.sol";
 
-contract Pool is ShareStore, StateModel, RoleModel {
+contract Pool is RoleModel {
 }
