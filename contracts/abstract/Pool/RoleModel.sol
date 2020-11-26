@@ -2,7 +2,6 @@ pragma solidity ^0.4.23;
 
 
 import "./IRoleModel.sol";
-import "./IStateModel.sol";
 
 
 contract RoleModel is IRoleModel{
