@@ -6,7 +6,7 @@ contract RolesRegistry {
   * RR_ADMIN - The Role controls adding a new wallet addresses to according roles arrays
   */
 
-  uint8 constant RR_ADMIN = 0x;
+  address RR_ADMIN = 0x97E8df9745f22E00691F0cBd880e0e7e612a5d0a;
 
   /**
   * RR_GPartner - The Role controls the approval process to transfer money inside
@@ -14,13 +14,13 @@ contract RolesRegistry {
   *               pools adding
   */
 
-  uint8 constant RR_GPartner = 0x;
+  address RR_GPartner = 0x5568C2CEe13045bC0843CB76E1213F496EFeDEaa;
 
   /**
   * RR_LPARTNER - The Role allows the wallet of LP to invest money in the
   *               investment pool and withdraw money from there (access to limited pools)
   */
-  uint8 constant RR_LPartner = 0x;
+  address RR_LPartner = 0x1C456598a1828693EC4B92D2871A308A6553F819;
 
   /**
   * RR_TEAM - Role that exposes access to wallets (the team member), were
@@ -32,7 +32,7 @@ contract RolesRegistry {
   *              investor’s money after convert to tokens/NFT assets (access tolimited pools)
   */
 
-  uint8 constant RR_STARTUP = 0x;
+  address RR_STARTUP = 0xC71DfA76Ea5eCAe6F03162Ba0902Af3a3392bE2c;
 
 
   /**
@@ -40,7 +40,7 @@ contract RolesRegistry {
   *               there a part of the fees.
   */
 
-  uint8 constant RR_REFERRER = 0x;
+  address RR_REFERRER = 0x52a405C479bAC25B536B0eC89229Ee9e34AF4d82;
 
   
   function getRole_() view internal returns(uint8);
