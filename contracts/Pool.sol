@@ -1,8 +1,8 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v1.12.0/contracts/ownership/Ownable.sol";
 
-import "./IPool.sol";
+import "iPool.sol";
 
 /**
  * @title SafeMath
@@ -38,9 +38,37 @@ library SafeMath {
 
 
 
+library Address { // helper function for address type / openzeppelin-contracts/blob/master/contracts/utils/Address.sol
+    function isContract(address account) internal view returns (bool) {
+        // According to EIP-1052, 0x0 is the value returned for not-yet created accounts
+        // and 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 is returned
+        // for accounts without code, i.e. `keccak256('')`
+        bytes32 codehash;
+        bytes32 accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
+        // solhint-disable-next-line no-inline-assembly
+       // assembly { codehash := extcodehash(account) }
+        return (codehash != accountHash && codehash != 0x0);
+    }
+}
+
+interface IWETH { // brief interface for ether wrapping contract 
+    function deposit() payable external;
+    function transfer(address dst, uint wad) external returns (bool);
+}
+
+interface IERC20 { // brief interface for erc20 token txs
+    function balanceOf(address who) external view returns (uint256);
+    
+    function transfer(address to, uint256 value) external returns (bool);
+
+    function transferFrom(address from, address to, uint256 value) external returns (bool);
+}
+
+
 contract InvestmentPool is IPool {
     
   using SafeMath for uint256; 
+//  using SafeERC20 for IERC20;
     
     // The balance in wei the pool currently manages
     uint public poolBalance;
@@ -50,7 +78,7 @@ contract InvestmentPool is IPool {
   address public projectPoolAddress;  
   
     address private locker = address(this);
-    //address public wETH = 
+
     uint256 public lockerIndex;
     mapping(uint256 => Deposit) public deposits; 
   
@@ -60,7 +88,7 @@ contract InvestmentPool is IPool {
 
   address public poolOwner;   
     
-
+    address public wETH = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
 
   mapping (address => uint256) public investments;    
 
@@ -69,6 +97,9 @@ contract InvestmentPool is IPool {
   uint256 public balance;   
 
   uint256 public tokenBalance;
+  
+  uint256 public collectedAmount;
+
 
   modifier onlyOwner() {
     require(msg.sender == poolOwner);
@@ -77,64 +108,81 @@ contract InvestmentPool is IPool {
   
   struct Deposit {  
         address _from; 
-        address _tokenAddressr;
+        address _tokenAddress;
         uint8 locked;
         uint256 amount;
     }
     
     
-    function PoolDeposit(  
-        address _from,
-        address _tokenAddress,
-        uint256 amount, 
-        uint256 period,
-        bool requestDeposit) payable external {
+    function poolDeposit(address _from,address _tokenAddress, uint256 amount, uint8 period, bool requestDeposit) payable external {
 
-      address _from = address(0);
 
         uint256 index = lockerIndex+1;
         lockerIndex = lockerIndex+1;
         
-        deposits[index] = Deposit(_from,_tokenAddress,amount,period);
+        deposits[index] = Deposit(_from,_tokenAddress,period,amount);
             
         
         if(!requestDeposit) {
-          doDeposit(_msgSender(), lockerIndex);
-            deposits[index].client = _msgSender();
+          doDeposit(msg.sender, lockerIndex, _tokenAddress);
+            deposits[index]._from = msg.sender;
         }
         
+    emit PoolDeposit(msg.sender, _tokenAddress, amount, period); 
+
+                }
         
-        emit DepositToken(_msgSender(), lockerIndex); 
+        
+    function doDeposit(address client, uint256 index, address tokenAddress) payable public {
+        
+        Deposit storage deposit = deposits[index];
+        
+         if (deposit._tokenAddress == wETH && msg.value > 0) {
+            IWETH(wETH).deposit();
+            (bool success, ) = wETH.call.value(msg.value)("");
+            require(success, "transfer failed");
+            IWETH(wETH).transfer(locker, msg.value);
+        } else {
+            
+            IERC20(deposit._tokenAddress).transferFrom(tokenAddress, locker, deposit.amount);
+            
+            collectedAmount = collectedAmount.add(msg.value);
+
+        // mint new staked tokens
+      // LPToken.mint(msg.sender, msg.value);
+
+        }
+        
     }
+        
     
-    function depositToken() {}...
-    
-    function PoolWithdrawalRequestCreated(uint256 index) external { 
+    function poolWithdrawalRequestCreated(uint256 index) external { 
         
-      Deposit storage deposit = deposits[index];
+      //Deposit storage deposit = deposits[index];
         
-        require(deposit.locked == 0, "deposit locked");
-        require(deposit.cap > deposit.released, "deposit released");
-        require(now > deposit.termination, "termination time pending");
+        //require(deposit.locked == 0, "deposit locked");
+        //require(deposit.cap > deposit.released, "deposit released");
+        //require(now > deposit.termination, "termination time pending");
         
+        //uint256 remainder = deposit.cap.sub(deposit.released); 
         
-        IERC20(deposit.token).safeTransfer(deposit.client, remainder);
+        //IERC20(deposit.token).safeTransfer(deposit.client, remainder);
         
-        deposit.released = deposit.released.add(remainder); 
+        //deposit.released = deposit.released.add(remainder); 
         
-      emit Withdraw(index, remainder); 
+      //emit Withdraw(index, remainder); 
     }
     
       function lock(uint256 index, bytes32 details) external { 
         Deposit storage deposit = deposits[index]; 
         
-        require(deposit.cap > deposit.released, "deposit released");
-        require(now < deposit.termination, "termination time passed"); 
-        require(_msgSender() == deposit.client || _msgSender() == deposit.provider, "not deposit party"); 
+        //require(deposit.cap > deposit.released, "deposit released");
+       // require(now < deposit.termination, "termination time passed"); 
+       // require(msg.sender == deposit.client || msg.sender == deposit.provider, "not deposit party"); 
         
       deposit.locked = 1; 
       
-      emit Lock(_msgSender(), index, details);
+      emit Lock(msg.sender, index, details);
     }
     
     
@@ -146,30 +194,23 @@ contract InvestmentPool is IPool {
               address _startup,
               address _lpartner,
               address _team,              
-              address _referrer,              
+              address _referrer             
               ) public {
 
 
-    setRole_(RR_ADMIN, msg.sender);
-    setRole_(RR_GPARTNER, _gpartner);
-    setRole_(RR_STARTUP, _startup);
-    setRole_(RR_TEAM, _team);
-    setRole_(RR_LPARTNER, _lpartner);
-    setRole_(RR_REFERRER, _referrer);
+//    setRole_(RR_ADMIN, msg.sender);
+  //  setRole_(RR_GPARTNER, _gpartner);
+    //setRole_(RR_STARTUP, _startup);
+//    setRole_(RR_TEAM, _team);
+  //  setRole_(RR_LPARTNER, _lpartner);
+//    setRole_(RR_REFERRER, _referrer);
 
 
-    setRole_(RL_POOL_MANAGER, _poolOperatorAddress);
+  //  setRole_(RL_POOL_MANAGER, _poolOperatorAddress);
 
 
   }
   
-
-  function() external payable {
-      //require(now > start && now < start + period*24*60*60 && (balance + msg.value) <= maxTotalAmount && msg.value >= minTotalAmountForOne && msg.value <= maxTotalAmountForOne);
-      investments[msg.sender] = investments[msg.sender].add(msg.value);
-      addresses.push(msg.sender);
-      balance = balance.add(msg.value);
-  }
   
   
   function getInvestmentAmount(address _address) public view returns(uint256) {
@@ -188,18 +229,7 @@ contract InvestmentPool is IPool {
     return poolCommision;
   }
   
-  function getIsInvest() public view returns(bool) {
-    return isInvest;
-  }
-  
-  
-  function investProject() public payable returns(bool) {
-      feesPoolAddress.transfer(address(this).balance.mul(poolCommision).div(100));
-    projectPoolAddress.call.value(address(this).balance)();
-    AbstractProject ProjectContract = AbstractProject(projectPoolAddress);
-    tokenBalance = ProjectContract.balanceOf(address(this));
-    isInvest = true;
-  }
+
   
    /**
   * Returns amount of ETH that contributor can withdrow from this contract
@@ -221,13 +251,10 @@ function withdrawEthToLP(uint _value) external returns(bool) {
     //return releaseStakeToStakeholder_(_state, _for, _value);
   }
 
-  function refund() public returns(bool) {
-    require(now > criticalDate && !(isInvest));
-    uint256 value = investments[msg.sender];
-    investments[msg.sender] = 0;
-    msg.sender.transfer(value);
-  }
 
+ function getCollectedAmount_() internal view returns (uint) {
+   return collectedAmount;
+  }
 
   function getStakeholderBalanceOf_(uint8 _for) internal view returns (uint) {
    //...
