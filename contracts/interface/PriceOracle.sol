@@ -13,3 +13,4 @@ interface IPriceOracle {
     sets the asset price, in wei
      */
     function setAssetPrice(address _asset, uint256 _price) external;
+}
