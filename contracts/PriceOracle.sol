@@ -1,16 +1,31 @@
-pragma solidity ^0.5.16;
+pragma solidity ^0.5.0;
 
-import "./OCCToken.sol";
+import "../../interfaces/IPriceOracle.sol";
 
-contract PriceOracle {
-    /// @notice Indicator that this is a PriceOracle contract (for inspection)
-    bool public constant isPriceOracle = true;
 
-    /**
-      * @notice Get the underlying price of a Token asset
-      * @param Token The Token to get the underlying price of
-      * @return The underlying asset price mantissa (scaled by 1e18).
-      *  Zero means the price is unavailable.
-      */
-    function getUnderlyingPrice(OccToken occToken) external view returns (uint);
+contract PriceOracle is IPriceOracle {
+
+    mapping(address => uint256) prices;
+    uint256 ethPriceUsd;
+
+    event AssetPriceUpdated(address _asset, uint256 _price, uint256 timestamp);
+    event EthPriceUpdated(uint256 _price, uint256 timestamp);
+
+    function getAssetPrice(address _asset) external view returns(uint256) {
+        return prices[_asset];
+    }
+
+    function setAssetPrice(address _asset, uint256 _price) external {
+        prices[_asset] = _price;
+        emit AssetPriceUpdated(_asset, _price, block.timestamp);
+    }
+
+    function getEthUsdPrice() external view returns(uint256) {
+        return ethPriceUsd;
+    }
+
+    function setEthUsdPrice(uint256 _price) external {
+        ethPriceUsd = _price;
+        emit EthPriceUpdated(_price, block.timestamp);
+    }
 }

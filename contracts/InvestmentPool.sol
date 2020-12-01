@@ -4,6 +4,9 @@ import "Ownable.sol";
 
 import "iPool.sol";
 
+import "PriceOracle.sol";
+
+
 /**
  * @title SafeMath
  * @dev Math operations with safety checks that throw on error
@@ -69,6 +72,9 @@ contract InvestmentPool is IPool {
     
   using SafeMath for uint256; 
 //  using SafeERC20 for IERC20;
+
+    address public oracle;
+
     
     // The balance in wei the pool currently manages
     uint public poolBalance;
@@ -216,6 +222,21 @@ contract InvestmentPool is IPool {
    /**
   * Release ETH to LP Partner
   */
+
+  function setAssetPrice(address _asset, uint256 _price) external {
+        
+        PriceOracleInterface oracleInterface = IPriceOracle(address);
+        uint priceMantissa = oracleInterface.setAssetPrice(asset);
+    }
+
+    function fetchAssetPrice(address asset) internal view returns (Error, Exp memory) {
+      
+
+        PriceOracleInterface oracleInterface = IPriceOracle(address);
+        uint priceMantissa = oracleInterface.getAssetPrice(asset);
+
+        return (Error.NO_ERROR, Exp({mantissa: priceMantissa}));
+    }
 
 
 
