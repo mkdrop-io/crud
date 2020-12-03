@@ -1,0 +1,1269 @@
+{
+  "contractName": "IRoleModel",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ORACLE_ROLE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "TEAM_ROLE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "REFERER_ROLE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "STURTAP_TEAM_ROLE",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.25+commit.59dbf8f1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"ORACLE_ROLE\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"TEAM_ROLE\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"REFERER_ROLE\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"STURTAP_TEAM_ROLE\",\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/mitgen/Private Projects/American2/contracts/interface/IRoleModel.sol\":\"IRoleModel\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/mitgen/Private Projects/American2/contracts/interface/IRoleModel.sol\":{\"keccak256\":\"0x9338b247367641db32db36685af8a7bc75522797df48fb1b0b087d94f0d8be83\",\"urls\":[\"bzzr://3ab91ea222455be8f36bda133735c60cce067b25556e8847589cee6abe32d520\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610243806100206000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806307e2cea51461006757806349d5e6041461009a5780635ac8b005146100cd578063ba12d08714610100575b600080fd5b34801561007357600080fd5b5061007c610133565b60405180826000191660001916815260200191505060405180910390f35b3480156100a657600080fd5b506100af61016c565b60405180826000191660001916815260200191505060405180910390f35b3480156100d957600080fd5b506100e26101a5565b60405180826000191660001916815260200191505060405180910390f35b34801561010c57600080fd5b506101156101de565b60405180826000191660001916815260200191505060405180910390f35b60405180807f4f5241434c455f524f4c45000000000000000000000000000000000000000000815250600b019050604051809103902081565b60405180807f5445414d5f524f4c4500000000000000000000000000000000000000000000008152506009019050604051809103902081565b60405180807f524546455245525f524f4c450000000000000000000000000000000000000000815250600c019050604051809103902081565b60405180807f535455525441505f5445414d5f524f4c4500000000000000000000000000000081525060110190506040518091039020815600a165627a7a723058201ec7b8fb3b1541909004ba115b056f64180b0beab0b0690da75427e440f76c8d0029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806307e2cea51461006757806349d5e6041461009a5780635ac8b005146100cd578063ba12d08714610100575b600080fd5b34801561007357600080fd5b5061007c610133565b60405180826000191660001916815260200191505060405180910390f35b3480156100a657600080fd5b506100af61016c565b60405180826000191660001916815260200191505060405180910390f35b3480156100d957600080fd5b506100e26101a5565b60405180826000191660001916815260200191505060405180910390f35b34801561010c57600080fd5b506101156101de565b60405180826000191660001916815260200191505060405180910390f35b60405180807f4f5241434c455f524f4c45000000000000000000000000000000000000000000815250600b019050604051809103902081565b60405180807f5445414d5f524f4c4500000000000000000000000000000000000000000000008152506009019050604051809103902081565b60405180807f524546455245525f524f4c450000000000000000000000000000000000000000815250600c019050604051809103902081565b60405180807f535455525441505f5445414d5f524f4c4500000000000000000000000000000081525060110190506040518091039020815600a165627a7a723058201ec7b8fb3b1541909004ba115b056f64180b0beab0b0690da75427e440f76c8d0029",
+  "sourceMap": "26:1872:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:1872:4;;;;;;;",
+  "deployedSourceMap": "26:1872:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1636:62;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1636:62:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;958:58;;8:9:-1;5:2;;;30:1;27;20:12;5:2;958:58:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1427:64;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1427:64:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1207:74;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1207:74:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1636:62;1674:24;;;;;;;;;;;;;;;;;;;1636:62;:::o;958:58::-;994:22;;;;;;;;;;;;;;;;;;;958:58;:::o;1427:64::-;1466:25;;;;;;;;;;;;;;;;;;;1427:64;:::o;1207:74::-;1251:30;;;;;;;;;;;;;;;;;;;1207:74;:::o",
+  "source": "pragma solidity ^0.4.25;\n\ncontract IRoleModel {\n\n  /**\n  * SUPER_ADMIN_ROLE - The Role controls adding a new wallet addresses to according roles arrays\n  */\n  bytes32 constant SUPER_ADMIN_ROLE = keccak256(\"SUPER_ADMIN_ROLE\");\n\n  /**\n  * GENERAL_PARTNER_ROLE - The Role controls the approval process to transfer money inside\n  *               investment pools and control Limited Partners adding, investment\n  *               pools adding\n  */\n  bytes32 constant GENERAL_PARTNER_ROLE = keccak256(\"GENERAL_PARTNER_ROLE\");\n\n  /**\n  * LIMITED_PARTNER_ROLE - The Role allows the wallet of LP to invest money in the\n  *               investment pool and withdraw money from there (access to limited pools)\n  */\n  bytes32 constant LIMITED_PARTNER_ROLE = keccak256(\"LIMITED_PARTNER_ROLE\");\n\n  /**\n  * TEAM_ROLE - Role that exposes access to wallets (the team member), were\n  *           distributed all fees, fines, and success premiums from investment pools\n  */\n  bytes32 public constant TEAM_ROLE = keccak256(\"TEAM_ROLE\");\n\n  /**\n  * STURTAP_TEAM_ROLE - Role that exposes access to wallets which can withdraw\n  *              investor’s money after convert to tokens/NFT assets (access tolimited pools)\n  */\n  bytes32 public constant STURTAP_TEAM_ROLE = keccak256(\"STURTAP_TEAM_ROLE\");\n\n  /**\n  * REFERER_ROLE - Registry of wallets, which connects LP with their Referrer to sent\n  *               there a part of the fees.\n  */\n  bytes32 public constant REFERER_ROLE = keccak256(\"REFERER_ROLE\");\n\n  /**\n  * ORACLE_ROLE - Registry of wallets, which connects LP with their Referrer to sent\n  *               there a part of the fees.\n  */\n  bytes32 public constant ORACLE_ROLE = keccak256(\"ORACLE_ROLE\");\n\n  // function getRole_() view internal returns(uint8);\n  // function getRole_(address _for) view internal returns(uint8);\n  // function getRoleAddress_(uint8 _for) view internal returns(address);\n}",
+  "sourcePath": "/home/mitgen/Private Projects/American2/contracts/interface/IRoleModel.sol",
+  "ast": {
+    "absolutePath": "/home/mitgen/Private Projects/American2/contracts/interface/IRoleModel.sol",
+    "exportedSymbols": {
+      "IRoleModel": [
+        714
+      ]
+    },
+    "id": 715,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 678,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".25"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 714,
+        "linearizedBaseContracts": [
+          714
+        ],
+        "name": "IRoleModel",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 683,
+            "name": "SUPER_ADMIN_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "159:65:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 679,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "159:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "53555045525f41444d494e5f524f4c45",
+                  "id": 681,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "205:18:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_7613a25ecc738585a232ad50a301178f12b3ba8887d13e138b523c4269c47689",
+                    "typeString": "literal_string \"SUPER_ADMIN_ROLE\""
+                  },
+                  "value": "SUPER_ADMIN_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_7613a25ecc738585a232ad50a301178f12b3ba8887d13e138b523c4269c47689",
+                    "typeString": "literal_string \"SUPER_ADMIN_ROLE\""
+                  }
+                ],
+                "id": 680,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "195:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 682,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "195:29:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 688,
+            "name": "GENERAL_PARTNER_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "445:73:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 684,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "445:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "47454e4552414c5f504152544e45525f524f4c45",
+                  "id": 686,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "495:22:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_9faee8629621ba747f113528afb474054147be6a4c4605e6fc48874ffd44940f",
+                    "typeString": "literal_string \"GENERAL_PARTNER_ROLE\""
+                  },
+                  "value": "GENERAL_PARTNER_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_9faee8629621ba747f113528afb474054147be6a4c4605e6fc48874ffd44940f",
+                    "typeString": "literal_string \"GENERAL_PARTNER_ROLE\""
+                  }
+                ],
+                "id": 685,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "485:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 687,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "485:33:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 693,
+            "name": "LIMITED_PARTNER_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "707:73:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 689,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "707:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "4c494d495445445f504152544e45525f524f4c45",
+                  "id": 691,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "757:22:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_060178d30334ec77d494ce50a731cbaea443c6f944703b2136555dd6e2d2f040",
+                    "typeString": "literal_string \"LIMITED_PARTNER_ROLE\""
+                  },
+                  "value": "LIMITED_PARTNER_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_060178d30334ec77d494ce50a731cbaea443c6f944703b2136555dd6e2d2f040",
+                    "typeString": "literal_string \"LIMITED_PARTNER_ROLE\""
+                  }
+                ],
+                "id": 690,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "747:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 692,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "747:33:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 698,
+            "name": "TEAM_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "958:58:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 694,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "958:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "5445414d5f524f4c45",
+                  "id": 696,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1004:11:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_5146a08baf902532d0ee2f909971144f12ca32651cd70cbee1117cddfb3b3b33",
+                    "typeString": "literal_string \"TEAM_ROLE\""
+                  },
+                  "value": "TEAM_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_5146a08baf902532d0ee2f909971144f12ca32651cd70cbee1117cddfb3b3b33",
+                    "typeString": "literal_string \"TEAM_ROLE\""
+                  }
+                ],
+                "id": 695,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "994:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 697,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "994:22:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 703,
+            "name": "STURTAP_TEAM_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "1207:74:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 699,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1207:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "535455525441505f5445414d5f524f4c45",
+                  "id": 701,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1261:19:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_e0266fddd9afb97c98f725ea3d21f6bab6e28f040a74440718196c073d91ed7f",
+                    "typeString": "literal_string \"STURTAP_TEAM_ROLE\""
+                  },
+                  "value": "STURTAP_TEAM_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_e0266fddd9afb97c98f725ea3d21f6bab6e28f040a74440718196c073d91ed7f",
+                    "typeString": "literal_string \"STURTAP_TEAM_ROLE\""
+                  }
+                ],
+                "id": 700,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "1251:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 702,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1251:30:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 708,
+            "name": "REFERER_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "1427:64:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 704,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1427:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "524546455245525f524f4c45",
+                  "id": 706,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1476:14:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_3f73cd3c9465ec54854974c92cde20652d18dff9c8ef3569eada031c269a082c",
+                    "typeString": "literal_string \"REFERER_ROLE\""
+                  },
+                  "value": "REFERER_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_3f73cd3c9465ec54854974c92cde20652d18dff9c8ef3569eada031c269a082c",
+                    "typeString": "literal_string \"REFERER_ROLE\""
+                  }
+                ],
+                "id": 705,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "1466:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 707,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1466:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 713,
+            "name": "ORACLE_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "1636:62:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 709,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1636:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "4f5241434c455f524f4c45",
+                  "id": 711,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1684:13:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef1",
+                    "typeString": "literal_string \"ORACLE_ROLE\""
+                  },
+                  "value": "ORACLE_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef1",
+                    "typeString": "literal_string \"ORACLE_ROLE\""
+                  }
+                ],
+                "id": 710,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "1674:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 712,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1674:24:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 715,
+        "src": "26:1872:4"
+      }
+    ],
+    "src": "0:1898:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/mitgen/Private Projects/American2/contracts/interface/IRoleModel.sol",
+    "exportedSymbols": {
+      "IRoleModel": [
+        714
+      ]
+    },
+    "id": 715,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 678,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".25"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 714,
+        "linearizedBaseContracts": [
+          714
+        ],
+        "name": "IRoleModel",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 683,
+            "name": "SUPER_ADMIN_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "159:65:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 679,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "159:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "53555045525f41444d494e5f524f4c45",
+                  "id": 681,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "205:18:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_7613a25ecc738585a232ad50a301178f12b3ba8887d13e138b523c4269c47689",
+                    "typeString": "literal_string \"SUPER_ADMIN_ROLE\""
+                  },
+                  "value": "SUPER_ADMIN_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_7613a25ecc738585a232ad50a301178f12b3ba8887d13e138b523c4269c47689",
+                    "typeString": "literal_string \"SUPER_ADMIN_ROLE\""
+                  }
+                ],
+                "id": 680,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "195:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 682,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "195:29:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 688,
+            "name": "GENERAL_PARTNER_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "445:73:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 684,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "445:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "47454e4552414c5f504152544e45525f524f4c45",
+                  "id": 686,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "495:22:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_9faee8629621ba747f113528afb474054147be6a4c4605e6fc48874ffd44940f",
+                    "typeString": "literal_string \"GENERAL_PARTNER_ROLE\""
+                  },
+                  "value": "GENERAL_PARTNER_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_9faee8629621ba747f113528afb474054147be6a4c4605e6fc48874ffd44940f",
+                    "typeString": "literal_string \"GENERAL_PARTNER_ROLE\""
+                  }
+                ],
+                "id": 685,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "485:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 687,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "485:33:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 693,
+            "name": "LIMITED_PARTNER_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "707:73:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 689,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "707:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "4c494d495445445f504152544e45525f524f4c45",
+                  "id": 691,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "757:22:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_060178d30334ec77d494ce50a731cbaea443c6f944703b2136555dd6e2d2f040",
+                    "typeString": "literal_string \"LIMITED_PARTNER_ROLE\""
+                  },
+                  "value": "LIMITED_PARTNER_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_060178d30334ec77d494ce50a731cbaea443c6f944703b2136555dd6e2d2f040",
+                    "typeString": "literal_string \"LIMITED_PARTNER_ROLE\""
+                  }
+                ],
+                "id": 690,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "747:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 692,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "747:33:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 698,
+            "name": "TEAM_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "958:58:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 694,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "958:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "5445414d5f524f4c45",
+                  "id": 696,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1004:11:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_5146a08baf902532d0ee2f909971144f12ca32651cd70cbee1117cddfb3b3b33",
+                    "typeString": "literal_string \"TEAM_ROLE\""
+                  },
+                  "value": "TEAM_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_5146a08baf902532d0ee2f909971144f12ca32651cd70cbee1117cddfb3b3b33",
+                    "typeString": "literal_string \"TEAM_ROLE\""
+                  }
+                ],
+                "id": 695,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "994:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 697,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "994:22:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 703,
+            "name": "STURTAP_TEAM_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "1207:74:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 699,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1207:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "535455525441505f5445414d5f524f4c45",
+                  "id": 701,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1261:19:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_e0266fddd9afb97c98f725ea3d21f6bab6e28f040a74440718196c073d91ed7f",
+                    "typeString": "literal_string \"STURTAP_TEAM_ROLE\""
+                  },
+                  "value": "STURTAP_TEAM_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_e0266fddd9afb97c98f725ea3d21f6bab6e28f040a74440718196c073d91ed7f",
+                    "typeString": "literal_string \"STURTAP_TEAM_ROLE\""
+                  }
+                ],
+                "id": 700,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "1251:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 702,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1251:30:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 708,
+            "name": "REFERER_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "1427:64:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 704,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1427:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "524546455245525f524f4c45",
+                  "id": 706,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1476:14:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_3f73cd3c9465ec54854974c92cde20652d18dff9c8ef3569eada031c269a082c",
+                    "typeString": "literal_string \"REFERER_ROLE\""
+                  },
+                  "value": "REFERER_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_3f73cd3c9465ec54854974c92cde20652d18dff9c8ef3569eada031c269a082c",
+                    "typeString": "literal_string \"REFERER_ROLE\""
+                  }
+                ],
+                "id": 705,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "1466:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 707,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1466:25:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 713,
+            "name": "ORACLE_ROLE",
+            "nodeType": "VariableDeclaration",
+            "scope": 714,
+            "src": "1636:62:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 709,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1636:7:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "4f5241434c455f524f4c45",
+                  "id": 711,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "1684:13:4",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef1",
+                    "typeString": "literal_string \"ORACLE_ROLE\""
+                  },
+                  "value": "ORACLE_ROLE"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_68e79a7bf1e0bc45d0a330c573bc367f9cf464fd326078812f301165fbda4ef1",
+                    "typeString": "literal_string \"ORACLE_ROLE\""
+                  }
+                ],
+                "id": 710,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 1340,
+                "src": "1674:9:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 712,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1674:24:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 715,
+        "src": "26:1872:4"
+      }
+    ],
+    "src": "0:1898:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-12-03T19:38:19.718Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
