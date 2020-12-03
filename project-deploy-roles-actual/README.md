@@ -8,7 +8,9 @@
 
 $ npm install
 
-# Shasta env
+NOTE: Edit .env.blank add TRUFFLE_PRIVATE_KEY, change addresses roles
+
+# Ropsten env
 $ . .env.blank && truffle console --network ropsten
 # or
 $ . .env.blank && truffle console --network mainnet

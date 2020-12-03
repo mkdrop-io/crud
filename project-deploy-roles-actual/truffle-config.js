@@ -22,7 +22,7 @@ module.exports = {
       network_id: 3,
       gasPrice: Web3.utils.toWei('135', 'gwei'),
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-      timeoutBlocks: 1000,  // # of blocks before a deployment times out  (minimum/default: 50)
+      timeoutBlocks: 100000,  // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     }
   },
